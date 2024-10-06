@@ -25,7 +25,7 @@ class Apps extends React.Component {
 	}
 
 	getFacilities = ()=> {
-		fetch('http://127.0.0.1:5000/api/v1/resources/features/all')
+		fetch('http://127.0.0.1:5000/api/v1/resources/features/skate')
 			.then((response) => response.json())
 	  		.then((data) => {
 	    	this.setState({ features: data });
@@ -100,26 +100,31 @@ const SimpleMap = ({features}) => {
   const mapRef = useRef(null);
   const latitude = 47.6061;
   const longitude = -122.3328;
-  const position = [47.636097, -122.372985]
-
+  console.log('simpleMap features', features)
   return ( 
+  	<div>
 	  <MapContainer center={[latitude, longitude]} zoom={13} ref={mapRef} style={{height: "100vh", width: "100vw"}}>
 		<TileLayer
 		  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 		/>
-	  {features.map(x => {
-
+	  {features.map((x, i) => {
+	  		
+	  			console.log(x)
+	  		
 		  	const point =[parseFloat(x.ypos), parseFloat(x.xpos)]
 		  	return (
 		  		<Marker position={point}  icon={DefaultIcon} >
-
+		  			<Popup>
+				        {x.name}
+				      </Popup>
 	            </Marker>
 		  	);
-		  })
+		  }) 
 	}
 	  </MapContainer>
+	  </div>
   );
 };
 
-export default SimpleMap;
+export default Apps;
