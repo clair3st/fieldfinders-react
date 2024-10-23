@@ -29,7 +29,7 @@ const SimpleMap = ({features}) => {
 	  		
 		  	const point =[parseFloat(x.ypos), parseFloat(x.xpos)]
 		  	return (
-		  		<Marker key={x.i} position={point}  icon={DefaultIcon} >
+		  		<Marker key={x.id} position={point}  icon={DefaultIcon} >
 		  			<Popup>
 				        {x.name}
 				        <br/>
