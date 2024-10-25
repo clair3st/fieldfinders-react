@@ -45,6 +45,7 @@ function App() {
           <button type="submit">
                 Explore!
            </button>
+           <span>Results: {features.length}</span>
            
            <p className="error-message" style={ {'minHeight': '1.2em', color: 'red'}}>{errorMessage}</p>
            
