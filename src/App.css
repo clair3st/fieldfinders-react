@@ -1,0 +1,43 @@
+
+
+body {
+	background: #c0c9cc;
+	font-family: "Inter", sans-serif;
+}
+h1{
+	font-family: "Ribeye Marrow", serif;
+}
+.container{
+	display:flex;
+}
+.leaflet-container{
+	border-radius:20px;
+	box-shadow:8px 8px 24px rgba(38, 50, 56, 0.12);
+}
+
+.search {
+  display: flex;
+}
+
+.search-input {
+  width: 100%;
+  border: 3px solid #123175;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search button {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #123175;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  background: #123175 url(./assets/search-white.svg) no-repeat 4px;
+}
+
