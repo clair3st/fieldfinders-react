@@ -1,3 +1,5 @@
+import './App.css';
+
 import { useState, useEffect} from 'react';
 import React from 'react';
 import axios from 'axios';
@@ -38,21 +40,26 @@ function App() {
         <h1>Seattle Field Finders </h1>
       </header>
        <div className="container">
-      <div >
-        <form className="search-form" onSubmit={handleSubmit}>
-        <input type="text" placeholder="Enter a City" onChange={(e) => setSearchInput(e.target.value) } ></input>
-          
-          <button type="submit">
-                Explore!
-           </button>
-           <span>Results: {features.length}</span>
-           
-           <p className="error-message" style={ {'minHeight': '1.2em', color: 'red'}}>{errorMessage}</p>
-           
-        </form>
-      </div>
-
-	     <SimpleMap features={features}/>
+      		<div className="form-container">
+		        <form className="search-form" onSubmit={handleSubmit}>
+		        <div className="wrap">
+						   <div className="search">
+						      <input type="text" className="search-input" placeholder="Enter a Sport" onChange={(e) => setSearchInput(e.target.value) }></input>
+						      <button type="submit">
+						        <i className="fa fa-search"></i>
+						     </button>
+						   </div>
+						</div>
+		       
+		           <span>Results: {features.length}</span>
+		           
+		           <p className="error-message" style={ {'minHeight': '1.2em', color: 'red'}}>{errorMessage}</p>
+		           
+		        </form>
+      		</div>
+      		<div className="map-container">
+	     			<SimpleMap features={features}/>
+	     		</div>
 	     </div>
     </div>
 	    );
