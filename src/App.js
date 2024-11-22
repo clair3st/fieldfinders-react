@@ -37,6 +37,7 @@ function App() {
 	   <div className="content">
 
 	   	<header>
+	   		<div className="logo"></div>
         <h1>Seattle Field Finders </h1>
       </header>
        <div className="container">
