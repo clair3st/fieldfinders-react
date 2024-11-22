@@ -1,22 +1,38 @@
-
+/*Color scheme:
+light grey: c0c9cc
+aquamarine: 5298c1
+slate: #63747a
+royal blue: #123175
+*/
 
 body {
-	background: #c0c9cc;
+	background: #5298c1;
 	font-family: "Inter", sans-serif;
 }
 h1{
 	font-family: "Ribeye Marrow", serif;
 }
-.container{
-	display:flex;
-}
+
 .leaflet-container{
 	border-radius:20px;
 	box-shadow:8px 8px 24px rgba(38, 50, 56, 0.12);
 }
-
+.form-container{
+	width:80vw;
+}
 .search {
   display: flex;
+  max-width: 500px;
+}
+.row {
+	position: relative;
+}
+.row span {
+	float:right;
+	position:absolute;
+	right:0;
+	top:0;
+	line-height:36px;
 }
 
 .search-input {
