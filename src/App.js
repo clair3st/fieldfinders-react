@@ -42,17 +42,17 @@ function App() {
        <div className="container">
       		<div className="form-container">
 		        <form className="search-form" onSubmit={handleSubmit}>
-		        <div className="wrap">
-						   <div className="search">
+		        	<div className="row">
+						   	<div className="search">
 						      <input type="text" className="search-input" placeholder="Enter a Sport" onChange={(e) => setSearchInput(e.target.value) }></input>
 						      <button type="submit">
 						        <i className="fa fa-search"></i>
-						     </button>
-						   </div>
-						</div>
+						     	</button>
+						  
+								</div>
+		           	<span>Results: {features.length}</span>
 		       
-		           <span>Results: {features.length}</span>
-		           
+		           </div>
 		           <p className="error-message" style={ {'minHeight': '1.2em', color: 'red'}}>{errorMessage}</p>
 		           
 		        </form>
