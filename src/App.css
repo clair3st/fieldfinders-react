@@ -9,10 +9,19 @@ body {
 	background: #5298c1;
 	font-family: "Inter", sans-serif;
 }
+header{
+	display:flex;
+	align-items:center;
+}
 h1{
 	font-family: "Ribeye Marrow", serif;
 }
-
+.logo{
+	background: url(./assets/soccer.svg) no-repeat;
+	width:24px;
+	height: 24px;
+	margin-right: 1em;
+}
 .leaflet-container{
 	border-radius:20px;
 	box-shadow:8px 8px 24px rgba(38, 50, 56, 0.12);
