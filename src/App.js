@@ -14,7 +14,7 @@ function App() {
 	async function getFacilities(){
 		setErrorMessage('')
 
-		await axios.get(`http://127.0.0.1:5000/api/v1/resources/features/${searchInput}`)
+		await axios.get(`https://clair3st.pythonanywhere.com/features/${searchInput}`)
 			.then((response) => {
 				if('data' in response){
 		    	setFeatures(response.data);
