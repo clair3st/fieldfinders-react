@@ -5,7 +5,6 @@ import React from 'react';
 import axios from 'axios';
 import SimpleMap from './components/SimpleMap.jsx'
 
-
 function App() {
 	const [features, setFeatures] = useState([])
 	const [searchInput, setSearchInput] = useState('')
