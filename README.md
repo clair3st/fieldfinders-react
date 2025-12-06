@@ -2,6 +2,7 @@
 
 A React web application that helps users discover and locate sporting facilities in Seattle parks. Search for sports facilities by name and view them on an interactive map with detailed information.
 
+Deployed [here](https://fieldfinders.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1a17176b-ce4b-4e49-a4bd-f92d9c562e96/deploy-status)](https://app.netlify.com/projects/fieldfinders/deploys)
 
 I originally built this app for a Code School project, built using jquery, local storage and deployed on heroku. I've since updated to use a python backend, react front end with a sqlite database.
